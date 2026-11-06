@@ -6,7 +6,8 @@
     <title>Учебная заявка - Алексеев Максим</title>
   </head>
   <body>
-    <nav>
+    <header>
+    <nav aria-label >
       <ul>
         <li><a href="index.html">Обо мне</a></li>
         <li><a href="hobby.html">Мои увлечения</a></li>
@@ -16,6 +17,8 @@
         <li><a href="application.html">Заявка</a></li>
       </ul>
     </nav>
+    </header>
+    <main>
     <h1>Заявка на учебный кружок</h1>
     <p>
       Это учебная форма. Вводите вымышленные данные. Заявка не сохраняется и не
@@ -81,16 +84,15 @@
       </p>
       <p>
         <label for="comment">Чему хотите научиться</label>
-        <textarea
-          id="comment"
-          name="comment"
-          rows="4"
-          maxlength="300"
-          required
-        ></textarea>
+        <textarea id="comment" name="comment" rows="4" maxlength="300" required>
+        </textarea>
       </p>
       <button type="submit">Отправить учебный пример</button>
       <button type="reset">Сбросить поля</button>
     </form>
+    </main>
+    <footer>
+      <p>Автор: Алексеев Максим. Учебная пракика УП.09.</p>
+    </footer>
   </body>
 </html>
