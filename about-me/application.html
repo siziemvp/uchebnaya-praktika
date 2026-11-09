@@ -3,96 +3,111 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
     <title>Учебная заявка - Алексеев Максим</title>
   </head>
   <body>
     <header>
-    <nav class="main-nav" aria-label >
-      <ul>
-        <li><a href="index.html">Обо мне</a></li>
-        <li><a href="hobby.html">Мои увлечения</a></li>
-        <li><a href="college.html">Мой колледж</a></li>
-        <li><a href="season.html">Мое любимое время года</a></li>
-        <li><a href="schedule.html">Расписание</a></li>
-        <li><a href="application.html">Заявка</a></li>
-        <li><a href="club.html">Клуб</a></li>
-        <li><a href="styles-check.html">Стили</a></li>
-      </ul>
-    </nav>
+      <nav class="main-nav" aria-label>
+        <ul>
+          <li><a href="index.html">Обо мне</a></li>
+          <li><a href="hobby.html">Мои увлечения</a></li>
+          <li><a href="college.html">Мой колледж</a></li>
+          <li><a href="season.html">Мое любимое время года</a></li>
+          <li><a href="schedule.html">Расписание</a></li>
+          <li><a href="application.html">Заявка</a></li>
+          <li><a href="club.html">Клуб</a></li>
+          <li><a href="styles-check.html">Стили</a></li>
+          <li><a href="flex-lab.html">Flexbox</a></li>
+          <li><a href="grid-lab.html">CSS Grid</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="position-lab.html">Лаборатория Position</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-    <h1>Заявка на учебный кружок</h1>
-    <p>
-      Это учебная форма. Вводите вымышленные данные. Заявка не сохраняется и не
-      поступает организатору.
-    </p>
-    <form action="application.html" method="get">
+      <h1>Заявка на учебный кружок</h1>
       <p>
-        <label for="student">Учебное имя</label>
-        <input id="student" name="student" type="text" minlength="2" required>
+        Это учебная форма. Вводите вымышленные данные. Заявка не сохраняется и
+        не поступает организатору.
       </p>
-      <p>
-        <label for="email">Учебная почта</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          placeholder="student@example.com"
-          required>
-      </p>
-      <p>
-        <label for="phone">Телефон из 11 цифр</label>
-        <input
-          id="phone"
-          name="phone"
-          type="tel"
-          pattern="[0-9]{11}"
-          required
-          aria-describedby="phone-help">
-        <small id="phone-help">Без пробелов и знака плюс</small>
-      </p>
-      <p>
-        <label for="date">Желаемая дата занятия</label>
-        <input id="date" name="date" type="date" required>
-      </p>
-      <fieldset>
-        <legend>Формат занятий</legend>
+      <form action="application.html" method="get">
         <p>
+          <label for="student">Учебное имя</label>
           <input
-            id="offline"
-            type="radio"
-            name="format"
-            value="offline"
+            id="student"
+            name="student"
+            type="text"
+            minlength="2"
             required>
-          <label for="offline">В колледже</label>
         </p>
         <p>
-          <input id="online" type="radio" name="format" value="online">
-          <label for="online">Дистанционно</label>
+          <label for="email">Учебная почта</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="student@example.com"
+            required>
         </p>
-      </fieldset>
-      <p>
-        <label for="topic">Направление</label>
-        <select id="topic" name="topic" required>
-          <option value="">Выберите направление</option>
-          <option value="html">HTML</option>
-          <option value="git">Git</option>
-          <option value="design">Графический дизайн</option>
-        </select>
-      </p>
-      <p>
-        <input id="reminder" name="reminder" type="checkbox" value="yes">
-        <label for="reminder">Добавить учебное напоминание</label>
-      </p>
-      <p>
-        <label for="comment">Чему хотите научиться</label>
-        <textarea id="comment" name="comment" rows="4" maxlength="300" required>
-        </textarea>
-      </p>
-      <button type="submit">Отправить учебный пример</button>
-      <button type="reset">Сбросить поля</button>
-    </form>
+        <p>
+          <label for="phone">Телефон из 11 цифр</label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            pattern="[0-9]{11}"
+            required
+            aria-describedby="phone-help">
+          <small id="phone-help">Без пробелов и знака плюс</small>
+        </p>
+        <p>
+          <label for="date">Желаемая дата занятия</label>
+          <input id="date" name="date" type="date" required>
+        </p>
+        <fieldset>
+          <legend>Формат занятий</legend>
+          <p>
+            <input
+              id="offline"
+              type="radio"
+              name="format"
+              value="offline"
+              required>
+            <label for="offline">В колледже</label>
+          </p>
+          <p>
+            <input id="online" type="radio" name="format" value="online">
+            <label for="online">Дистанционно</label>
+          </p>
+        </fieldset>
+        <p>
+          <label for="topic">Направление</label>
+          <select id="topic" name="topic" required>
+            <option value="">Выберите направление</option>
+            <option value="html">HTML</option>
+            <option value="git">Git</option>
+            <option value="design">Графический дизайн</option>
+          </select>
+        </p>
+        <p>
+          <input id="reminder" name="reminder" type="checkbox" value="yes">
+          <label for="reminder">Добавить учебное напоминание</label>
+        </p>
+        <p>
+          <label for="comment">Чему хотите научиться</label>
+          <textarea
+            id="comment"
+            name="comment"
+            rows="4"
+            maxlength="300"
+            required
+          >
+          </textarea>
+        </p>
+        <button type="submit">Отправить учебный пример</button>
+        <button type="reset">Сбросить поля</button>
+      </form>
     </main>
     <footer class="page-footer">
       <p>Автор: Алексеев Максим. Учебная пракика УП.09.</p>
