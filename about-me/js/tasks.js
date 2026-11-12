@@ -59,30 +59,29 @@ if (number > 0) {
 } else { 
     console.log('Ноль');
 }
-const userNumber = Number(prompt('Введите целое число'));
+// const userNumber = Number(prompt('Введите целое число')); //
 
-if (Number.isNaN(userNumber)) {
-    console.log('Это не число');
-} else if (userNumber % 2 === 0) {
-    console.log(userNumber + ' - чётное');
-} else {
-    console.log(userNumber + ' - нечётное');
+// if (Number.isNaN(userNumber)) { //
+   // console.log('Это не число'); //
+// } else if (userNumber % 2 === 0) { //
+   // console.log(userNumber + ' - чётное'); //
+// } else { //
+ // console.log(userNumber + ' - нечётное'); //
+ // } //
+
+function getMark(points) {
+    if ((points > 100) || (points < 0)) {
+        console.log('Баллы должны быть от 0 до 100');
+    } else if (points>=90) {
+        return 5;
+    } else if (points>=75) {
+        return 4;
+    } else if (points>=60) {
+        return 3;
+    } else {
+        return 2;
+    }
 }
-const score = 78; 
-let mark;
-
-if (score >= 90) { 
-    mark = 5;
-} else if (score >= 75) { 
-    mark = 4;
-} else if (score >= 60) { 
-    mark = 3;
-} else { 
-    mark = 2;
-}
-
-console.log(`Баллов: ${score}, оценка: ${mark}`);
-
 const dayNumber = 3; 
 let dayName;
 
@@ -116,6 +115,7 @@ console.log(`День ${dayNumber}: ${dayName}`);
 
 const isWeekend = dayNumber === 6 || dayNumber === 7; 
 console.log('Выходной:', isWeekend);
+console.log('Будни:', !isWeekend);
 
 for (let i = 1; i <= 10; i++) {
     console.log(`7 * ${i} = ${7 * i}`);
@@ -141,3 +141,106 @@ while (i <= 10) {
     
     i++; 
 }
+ // ===== Пара 24: функции и массивы ===== //
+ function greet(name) {
+    return `Привет, ${name}!`;
+ }
+ console.log(greet('Анна'));
+ console.log(greet('Пётр'));
+ function isEven(number) {
+    return number % 2 === 0;
+ }
+ console.log(isEven(10));
+ console.log(isEven(7));
+
+ function test() {
+    const inside = 'внутри';
+    console.log(inside);
+ }
+ test();
+ // console.log(inside);
+
+ const square = (x) => x * x;
+ const celsiusToFahrenheit = (c) => c * 9 / 5 + 32;
+ const addNumbers = (a, b) => a + b;
+ 
+ console.log(square(7));
+ console.log(celsiusToFahrenheit(20));
+ console.log(addNumbers(2, 3));
+
+ const rectangArea2 = (width, height) => width * height;
+ const isEven2 = (number) => number % 2 === 0;
+
+ console.log('Площадь 5x4:', rectangArea2(5, 4));
+ console.log('Чётное ли 10:', isEven2(10));
+ console.log('Чётное ли 7:', isEven2(7));
+
+ const subjects = ['Математика', 'Информатика', 'Физика'];
+ console.log(subjects.length); // количество предметов
+ console.log(subjects[0]); // предмет с индексом 0 = Математика
+ console.log(subjects[subjects.length - 1]);
+
+ subjects.push('История'); //Добавляет элемент в конец массива
+ console.log(subjects);
+ const removed = subjects.pop(); // .pop удаляет последний элемент
+ console.log('Удалили:', removed);
+
+ for (const subject of subjects) {
+    console.log('Предмет: ' + subject);
+ }
+
+ const grades = [5, 4, 3, 5, 4];
+
+ function getAverage(list) {
+    let total = 0;
+    for (const value of list) {
+        total += value;
+    }
+    return total / list.length;
+ }
+ console.log('Средняя оценка:', getAverage(grades).toFixed(2));
+
+ let best = grades [0];
+ for (const value of grades) {
+    if (value > best) {
+        best = value;
+    }
+ }
+ console.log('Лучшая оценка', best);
+
+const numbers = [3, 8, 12, 5, 20, 1];
+const doubled = numbers.map((x) => x * 2);
+const big = numbers.filter((x) => x > 5);
+console.log(doubled);
+console.log(big);
+console.log(numbers);
+
+const names = ['Анна', 'Борис', 'Алексей', 'Вера'];
+const startsWithA = names.filter((item) => item.startsWith('A'));
+console.log(startsWithA.join(', '));
+const upperNames = names.map((item) => item.toUpperCase());
+console.log(upperNames);
+
+// Самостоятельная часть пары 24
+
+function analyzeGrades(list) {
+    
+    console.log('Количество оценок:', list.length);
+    
+    avg = getAverage(list).toFixed(2);
+    console.log('Средний балл:', avg)
+    const best = Math.max(...list)
+    console.log('Лучшая оценка:', best);
+    const lowest = Math.min(...list)
+    console.log('Худшая оценка:', lowest);
+
+    let two = list.filter((item) => item === 2).length;
+    if (avg < 3.5){
+        console.log('Незачёт,', 'Двоек:', two);
+    } else {
+        console.log('Зачёт');
+    }
+}
+
+analyzeGrades([3, 2, 4, 3, 3, 5, 5, 5, 2]);
+
