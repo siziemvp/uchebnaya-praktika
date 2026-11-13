@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Провека форм</title>
+    <script src="js/form.js" defer></script>
+</head>
+<body>
+    
+    <h1>Регистрация студента</h1>
+
+    <form id="registration-form" novalidate>
+        <label for="student-name">Имя</label>
+        <input type="text" id="student-name">
+
+        <label for="student-email">Email</label>
+        <input type="email" id="student-email">
+
+        <label for="student-password">Пароль</label>
+        <input type="password" id="student-password">
+        
+        <label for="student-group">Группа</label>
+        <input type="text" id="student-group">
+
+        <button type="submit">Проверить данные</button>
+    </form>
+
+    <p id="result"></p>
+    <h2>Настройка пользователя</h2>
+
+    <button id="save-name">Сохранить имя</button>
+    <button id="show-name">Показать имя</button>
+    <button id="delete-name">Удалить имя</button>
+    <button id="save-group">Сохранить группу</button>
+    <button id="show-group">Показать группу</button>
+
+    <p id="saved-result"></p>
+
+    <h2>Тема оформления</h2>
+
+    <button  id="theme-btn">Переключить тему</button>
+
+    <h2>Мои настройки</h2>
+    <label for="student-lang">Введите ваш любимый язык программирования</label>
+    <input type="text" id="student-lang">
+    <button id="save-lang">Сохранить</button>
+    <button id="show-lang">Показать</button>
+    <button id="delete-lang">Очистить</button>
+
+    <p id="lang-result"></p>
+</body>
+</html>
