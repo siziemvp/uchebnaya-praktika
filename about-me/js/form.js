@@ -61,13 +61,14 @@ const saveBtn = document.querySelector('#save-name');
 const showBtn = document.querySelector('#show-name');
 const deleteBtn = document.querySelector('#delete-name');
 const savedResult = document.querySelector('#saved-result');
-const saveGroupBtn = document.querySelector('#save-group')
-const showGroupBtn = document.querySelector('#show-group')
+const saveGroupBtn = document.querySelector('#save-group');
+const showGroupBtn = document.querySelector('#show-group');
 
-const saveLangBtn = document.querySelector('#save-lang')
-const showLangBtn = document.querySelector('#show-lang')
-const deleteLangBtn = document.querySelector('#delete-lang')
-const langResult = document.querySelector('#lang-result')
+const saveLangBtn = document.querySelector('#save-lang');
+const showLangBtn = document.querySelector('#show-lang');
+const deleteLangBtn = document.querySelector('#delete-lang');
+const langResult = document.querySelector('#lang-result');
+const deleteGroup = document.querySelector('#delete-group-btn');
 
 
 saveBtn.addEventListener('click', function() {
@@ -121,7 +122,11 @@ showGroupBtn.addEventListener('click', function() {
     } else {
         savedResult.textContent = 'Ваша группа: ' +  group;
     }
-}) 
+});
+deleteGroup.addEventListener('click', function() {
+    localStorage.removeItem('studentGroup');
+    savedResult.textContent = 'Группа удалена';
+});
 
 // Задача 4
 

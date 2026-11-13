@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "name": "Максон Алексеев",
+      "email": "makson@gmail.com",
+      "phone": "+7 (917) 672-82-35",
+      "address": { "city": "Чебоксары" }
+    },
+    {
+      "id": 2,
+      "name": "Санек",
+      "email": "Sanek3004@gmail.com",
+      "phone": "+7 (900) 199-67-40",
+      "address": { "city": "Новчик" }
+    },
+    {
+      "id": 3,
+      "name": "Федор Кириллович",
+      "email": "FedrKirlsix@mail.com",
+      "phone": "+7 (900) 110-12-10",
+      "address": { "city": "Шумерля" }
+    }
+  ]

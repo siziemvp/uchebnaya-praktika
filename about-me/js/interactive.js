@@ -46,6 +46,7 @@ addTaskBtn.addEventListener('click', function () {
 
   doneBtn.addEventListener('click', function () { 
     li.classList.toggle('completed'); 
+    li.style.color = "green"
     }); 
 
 li.append(doneBtn);

@@ -1,0 +1,22 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "title": "Творог",
+        "description": "Вкусный и много белка",
+        "price": 12,
+        "rating": 4.9,
+        "category": "tvorog",
+        "img": "https://avatars.mds.yandex.net/i?id=2e795d260e2e5c0fd6d108bd797f681f_l-5287214-images-thumbs&n=13"
+      },
+      {
+        "id": 2,
+        "title": "Iphone 18 pro",
+        "description": "Самый крутой телефон",
+        "price": 1900,
+        "rating": 4.1,
+        "category": "iphone",
+        "img": "https://avatars.mds.yandex.net/i?id=1ebec637aeacc6780e59cefa15ab0774_l-4055819-images-thumbs&n=13"
+      }
+    ]
+  }
