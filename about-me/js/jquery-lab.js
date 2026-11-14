@@ -51,7 +51,7 @@ $('#load-btn').click(function () {
     $('#users').text('Загрузка...');
 
     $.ajax({
-        url: 'https://jsonplaceholder.typicode.com/users',
+        url: 'data/users.json',
         method: 'GET',
 
         success: function (users) {
@@ -74,7 +74,9 @@ $('#load-btn').click(function () {
 
                 $('#users').append(card);
 
-                $('.card').css('backgroundColor', 'lime');
+                $('.card').css('backgroundColor', 'aqua');
+                $('.card').css('border-radius', '15px');
+
             }
 
         },
