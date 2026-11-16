@@ -80,7 +80,7 @@ var_dump($price);
 echo '<br>';
 var_dump($kolvo);
 echo '<br>';
-var_dump($tovarskidka);
+var_dump($skidka);
 echo '<br>';
 $inStock = true;
 $rating = 4.9;
