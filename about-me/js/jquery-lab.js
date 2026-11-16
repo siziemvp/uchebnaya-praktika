@@ -91,7 +91,7 @@ $('#load-btn').click(function () {
 
 // Самостоятельная часть
 
-$('#hide-color').css('backgroundColor', 'lime');
+$('#hide-color').css('backgroundColor', 'Peru');
 $('#toggle-info').click(function () {
     $('#hide-info').toggle();
 });
